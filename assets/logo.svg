@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+    <!-- Wave Symbol -->
+    <path d="M20 35 Q30 25 40 35 Q50 45 60 35" stroke="#00b4d8" stroke-width="3" fill="none"/>
+    <path d="M15 30 Q25 20 35 30 Q45 40 55 30" stroke="#48cae4" stroke-width="3" fill="none"/>
+    <path d="M10 25 Q20 15 30 25 Q40 35 50 25" stroke="#90e0ef" stroke-width="3" fill="none"/>
+    
+    <!-- Text -->
+    <text x="70" y="35" font-family="Arial" font-weight="bold" font-size="24" fill="#00b4d8">
+        NexWave
+    </text>
+    <text x="70" y="45" font-family="Arial" font-size="12" fill="#48cae4">
+        WIRELESS
+    </text>
+</svg>

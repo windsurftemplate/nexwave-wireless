@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexWave Wireless - High-Speed Internet Provider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#00b4d8',
+                        'secondary': '#48cae4',
+                        'accent': '#90e0ef',
+                        'dark-blue': '#03045e',
+                        'deep-blue': '#023e8a',
+                        'medium-blue': '#0077b6',
+                        'dark-bg': '#051923',
+                        'darker-bg': '#03111a',
+                        'card-bg': '#062436',
+                    },
+                    animation: {
+                        'wave': 'wave 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        wave: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-to-br from-dark-blue to-dark-bg text-white font-[Poppins]">
+    <header class="fixed w-full z-50 bg-dark-blue/95 backdrop-blur-md shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="NexWave Wireless" class="h-12">
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
+                <a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300">Features</a>
+                <a href="#plans" class="text-gray-300 hover:text-white transition-colors duration-300">Plans</a>
+                <a href="#connect" class="text-gray-300 hover:text-white transition-colors duration-300">Connect</a>
+            </div>
+            <a href="#connect" class="hidden md:inline-block bg-gradient-to-r from-primary to-medium-blue text-white py-2 px-6 rounded-lg font-semibold hover:shadow-lg hover:scale-[1.02] transform transition-all duration-300">
+                Get Started
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Animated wave background -->
+            <div class="absolute inset-0 z-0">
+                <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                    <path class="animate-wave" fill="#0077b6" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    <path class="animate-wave [animation-delay:0.2s]" fill="#00b4d8" fill-opacity="0.2" d="M0,256L48,234.7C96,213,192,171,288,165.3C384,160,480,192,576,197.3C672,203,768,181,864,165.3C960,149,1056,139,1152,154.7C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    <path class="animate-wave [animation-delay:0.4s]" fill="#90e0ef" fill-opacity="0.2" d="M0,128L48,144C96,160,192,192,288,192C384,192,480,160,576,165.3C672,171,768,213,864,218.7C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-dark-blue/30 to-dark-bg/70"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-float bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                        Experience Lightning-Fast Internet
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Unleash the power of next-generation wireless connectivity for your home and business.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="#connect" class="inline-block bg-gradient-to-r from-primary to-medium-blue text-white py-3 px-8 rounded-lg font-semibold text-lg hover:shadow-lg hover:scale-[1.02] transform transition-all duration-300">
+                            Get Connected
+                        </a>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-dark-blue transition-all duration-300">
+                            View Plans
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-dark-bg to-transparent"></div>
+        </section>
+
+        <section id="features" class="py-20 bg-gradient-to-br from-deep-blue to-darker-bg relative overflow-hidden">
+            <!-- Decorative circles -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent"></div>
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                    Why Choose NexWave?
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-accent/10 group">
+                        <i class="fas fa-bolt text-4xl mb-4 text-primary group-hover:text-accent transition-colors duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-4">High-Speed</h3>
+                        <p class="text-gray-300">Lightning-fast internet speeds up to 1 Gbps</p>
+                    </div>
+                    <div class="bg-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-accent/10 group animate-float">
+                        <i class="fas fa-wifi text-4xl mb-4 text-primary group-hover:text-accent transition-colors duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-4">Reliable</h3>
+                        <p class="text-gray-300">99.9% uptime guarantee</p>
+                    </div>
+                    <div class="bg-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-accent/10 group">
+                        <i class="fas fa-headset text-4xl mb-4 text-primary group-hover:text-accent transition-colors duration-300"></i>
+                        <h3 class="text-xl font-semibold mb-4">24/7 Support</h3>
+                        <p class="text-gray-300">Expert technical support always available</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gradient-to-br from-dark-blue to-darker-bg relative overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                    About NexWave Wireless
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="bg-card-bg/50 backdrop-blur-sm p-8 rounded-xl border border-accent/10 transform hover:scale-105 transition-all duration-300">
+                            <h3 class="text-2xl font-semibold mb-4 text-primary">Our Vision</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                We are the next generation of reliable, affordable, and easily installed connectivity that is accessible anywhere in the United States. 
+                                Our commitment is to ensure every corner of the nation enjoys seamless and robust connectivity empowering individuals, businesses, and communities alike.
+                            </p>
+                        </div>
+
+                        <div class="bg-card-bg/50 backdrop-blur-sm p-8 rounded-xl border border-accent/10 transform hover:scale-105 transition-all duration-300">
+                            <h3 class="text-2xl font-semibold mb-4 text-primary">Our Values</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                With 25 years of wireless experience, we are dedicated to continuous innovation, pushing the boundaries of technology to deliver cutting edge connectivity. 
+                                We value our partnerships, our customers, and provide a positive impact on the communities we serve.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <!-- Decorative network illustration -->
+                        <div class="relative aspect-square">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-48 h-48 bg-primary/20 rounded-full animate-pulse-slow"></div>
+                                <div class="absolute w-32 h-32 bg-accent/20 rounded-full animate-pulse-slow [animation-delay:0.5s]"></div>
+                            </div>
+                            <!-- Connection lines -->
+                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+                                <line x1="20" y1="20" x2="80" y2="80" stroke="url(#gradient)" stroke-width="0.5" class="animate-pulse-slow">
+                                    <animate attributeName="stroke-opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite" />
+                                </line>
+                                <line x1="80" y1="20" x2="20" y2="80" stroke="url(#gradient)" stroke-width="0.5" class="animate-pulse-slow">
+                                    <animate attributeName="stroke-opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite" />
+                                </line>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color: #00b4d8" />
+                                        <stop offset="100%" style="stop-color: #90e0ef" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <!-- Network nodes -->
+                            <div class="absolute top-1/4 left-1/4 w-4 h-4 bg-primary rounded-full animate-float"></div>
+                            <div class="absolute top-1/4 right-1/4 w-4 h-4 bg-accent rounded-full animate-float [animation-delay:0.2s]"></div>
+                            <div class="absolute bottom-1/4 left-1/4 w-4 h-4 bg-accent rounded-full animate-float [animation-delay:0.4s]"></div>
+                            <div class="absolute bottom-1/4 right-1/4 w-4 h-4 bg-primary rounded-full animate-float [animation-delay:0.6s]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans" class="py-20 bg-gradient-to-br from-medium-blue to-dark-bg relative overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+            
+            <!-- Speed indicator animations -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute top-20 left-10 animate-pulse-slow">
+                    <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5z"/>
+                        <path d="M8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7z"/>
+                        <path d="M14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                    </svg>
+                </div>
+                <div class="absolute top-40 right-10 animate-pulse-slow [animation-delay:0.5s]">
+                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 3.636a1 1 0 010 1.414 7 7 0 000 9.9 1 1 0 11-1.414 1.414 9 9 0 010-12.728 1 1 0 011.414 0zm9.9 0a1 1 0 011.414 0 9 9 0 010 12.728 1 1 0 11-1.414-1.414 7 7 0 000-9.9 1 1 0 010-1.414zM7.879 6.464a1 1 0 010 1.414 3 3 0 000 4.243 1 1 0 11-1.414 1.414 5 5 0 010-7.07 1 1 0 011.414 0zm4.242 0a1 1 0 011.414 0 5 5 0 010 7.072 1 1 0 01-1.414-1.414 3 3 0 000-4.242 1 1 0 010-1.415z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent"></div>
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                    Internet Plans
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-accent/10 group">
+                        <h3 class="text-xl font-semibold mb-4">Starter</h3>
+                        <div class="text-3xl font-bold mb-4">$49.99<span class="text-lg font-normal">/mo</span></div>
+                        <ul>
+                            <li class="text-gray-300">100 Mbps</li>
+                            <li class="text-gray-300">Unlimited Data</li>
+                            <li class="text-gray-300">Free Installation</li>
+                        </ul>
+                        <button class="bg-gradient-to-r from-primary to-medium-blue text-white px-8 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            Choose Plan
+                        </button>
+                    </div>
+                    <div class="bg-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-accent/10 group animate-float">
+                        <h3 class="text-xl font-semibold mb-4">Pro</h3>
+                        <div class="text-3xl font-bold mb-4">$69.99<span class="text-lg font-normal">/mo</span></div>
+                        <ul>
+                            <li class="text-gray-300">500 Mbps</li>
+                            <li class="text-gray-300">Unlimited Data</li>
+                            <li class="text-gray-300">Free Installation</li>
+                            <li class="text-gray-300">Priority Support</li>
+                        </ul>
+                        <button class="bg-gradient-to-r from-primary to-medium-blue text-white px-8 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            Choose Plan
+                        </button>
+                    </div>
+                    <div class="bg-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-accent/10 group">
+                        <h3 class="text-xl font-semibold mb-4">Ultimate</h3>
+                        <div class="text-3xl font-bold mb-4">$89.99<span class="text-lg font-normal">/mo</span></div>
+                        <ul>
+                            <li class="text-gray-300">1 Gbps</li>
+                            <li class="text-gray-300">Unlimited Data</li>
+                            <li class="text-gray-300">Free Installation</li>
+                            <li class="text-gray-300">24/7 Premium Support</li>
+                        </ul>
+                        <button class="bg-gradient-to-r from-primary to-medium-blue text-white px-8 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            Choose Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect" class="py-20 bg-gradient-to-br from-dark-blue to-darker-bg relative overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                        Connect with Us
+                    </h2>
+                    <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+                        Ready to experience lightning-fast internet? Fill out the form below and our team will get back to you within 24 hours.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-start">
+                        <!-- Contact Form -->
+                        <div class="bg-card-bg/50 backdrop-blur-sm p-8 rounded-xl border border-accent/10">
+                            <form id="contactForm" class="space-y-6">
+                                <div class="space-y-2">
+                                    <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full px-4 py-3 rounded-lg bg-darker-bg border border-accent/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                        placeholder="John Doe">
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-3 rounded-lg bg-darker-bg border border-accent/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                        placeholder="john@example.com">
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="phone" class="block text-sm font-medium text-gray-300">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" required
+                                        class="w-full px-4 py-3 rounded-lg bg-darker-bg border border-accent/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                        placeholder="(555) 123-4567">
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="address" class="block text-sm font-medium text-gray-300">Service Address</label>
+                                    <input type="text" id="address" name="address" required
+                                        class="w-full px-4 py-3 rounded-lg bg-darker-bg border border-accent/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                        placeholder="123 Main St, City, State, ZIP">
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="message" class="block text-sm font-medium text-gray-300">Additional Information</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        class="w-full px-4 py-3 rounded-lg bg-darker-bg border border-accent/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                        placeholder="Tell us about your internet needs..."></textarea>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="terms" name="terms" required
+                                        class="w-4 h-4 text-primary bg-darker-bg border-accent/20 rounded focus:ring-primary">
+                                    <label for="terms" class="ml-2 text-sm text-gray-300">
+                                        I agree to the <a href="#" class="text-primary hover:text-accent">Terms of Service</a> and <a href="#" class="text-primary hover:text-accent">Privacy Policy</a>
+                                    </label>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full bg-gradient-to-r from-primary to-medium-blue text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg hover:scale-[1.02] transform transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50">
+                                    Get Connected
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="space-y-8">
+                            <div class="bg-card-bg/50 backdrop-blur-sm p-8 rounded-xl border border-accent/10">
+                                <h3 class="text-xl font-semibold mb-6 text-primary">Contact Information</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-phone text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Call Us</p>
+                                            <p class="text-white">(555) 123-4567</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-envelope text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Email Us</p>
+                                            <p class="text-white">support@nexwave.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-clock text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Business Hours</p>
+                                            <p class="text-white">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Preview -->
+                            <div class="bg-card-bg/50 backdrop-blur-sm p-8 rounded-xl border border-accent/10">
+                                <h3 class="text-xl font-semibold mb-6 text-primary">Frequently Asked Questions</h3>
+                                <div class="space-y-4">
+                                    <div class="group cursor-pointer">
+                                        <div class="flex items-center justify-between">
+                                            <h4 class="text-white group-hover:text-primary transition-colors duration-300">How fast is the installation?</h4>
+                                            <i class="fas fa-chevron-down text-primary group-hover:rotate-180 transition-transform duration-300"></i>
+                                        </div>
+                                        <p class="text-gray-400 mt-2 hidden group-hover:block">Most installations are completed within 2-3 business days after approval.</p>
+                                    </div>
+                                    <div class="group cursor-pointer">
+                                        <div class="flex items-center justify-between">
+                                            <h4 class="text-white group-hover:text-primary transition-colors duration-300">Do you require a long-term contract?</h4>
+                                            <i class="fas fa-chevron-down text-primary group-hover:rotate-180 transition-transform duration-300"></i>
+                                        </div>
+                                        <p class="text-gray-400 mt-2 hidden group-hover:block">No long-term contracts required! Our services are month-to-month.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-darker-bg border-t-4 border-deep-blue py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#about" class="text-gray-300 hover:text-accent transition-colors duration-300">About Us</a>
+                        <a href="#careers" class="text-gray-300 hover:text-accent transition-colors duration-300">Careers</a>
+                        <a href="#news" class="text-gray-300 hover:text-accent transition-colors duration-300">News</a>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#help" class="text-gray-300 hover:text-accent transition-colors duration-300">Help Center</a>
+                        <a href="#contact" class="text-gray-300 hover:text-accent transition-colors duration-300">Contact Us</a>
+                        <a href="#status" class="text-gray-300 hover:text-accent transition-colors duration-300">Network Status</a>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#privacy" class="text-gray-300 hover:text-accent transition-colors duration-300">Privacy Policy</a>
+                        <a href="#terms" class="text-gray-300 hover:text-accent transition-colors duration-300">Terms of Service</a>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center text-gray-400">
+                <p>&copy; 2024 NexWave Wireless. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
